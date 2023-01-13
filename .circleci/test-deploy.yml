@@ -17,6 +17,12 @@ jobs:
       - checkout
       # Run your orb's commands to validate them.
       - test/greet
+      - test/email:
+          to: "raffiquemuir@yahoo.com"
+          from: "rmuir@realdecoy.com"
+          subject: "testing of orb"
+          body: "This is a test case if orb functions properly."
+          attachments: "something good happens eventually"
 workflows:
   test-deploy:
     jobs:
@@ -39,4 +45,4 @@ workflows:
             tags:
               only: /^v[0-9]+\.[0-9]+\.[0-9]+$/
 
-# VS Code Extension Version: 1.4.0
+# VS Code Extension Version: 1.5.1

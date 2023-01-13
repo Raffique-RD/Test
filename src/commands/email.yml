@@ -1,0 +1,30 @@
+description: >
+  Send email
+
+parameters:
+  to:
+    type: string
+    description: "Person receiving the email"
+  from:
+    type: string
+    description: "Person sending the email"
+  subject:
+    type: string
+    description: "Subject of the email"
+  body:
+    type: string
+    description: "Body of the email"
+  attachments:
+    type: string
+    description: "files attached to email"
+
+steps:
+  - run:
+      environment:
+        TO: <<parameters.to>>
+        FROM: <<parameters.from>>
+        SUBJECT: <<parameters.subject>>
+        BODY: <<parameters.body>>
+        ATTACH: <<parameters.attachments>>
+      name: Send Email
+      command: <<include(scripts/email.sh)>>

@@ -1,13 +1,13 @@
 version: 2.1
 
 description: >
-  Sample orb description
+  This is a test ORB implementation for SSCI OWASP CLOC Email reporting service version 1; this will be used to implement OWASP & CLOC functionality.
 # What will your orb allow users to accomplish?
 # Descriptions should be short, simple, and informative.
 
 # This information will be displayed in the orb registry and is not mandatory.
 display:
-  home_url: "https://www.example.com/docs"
+  home_url: "https://github.com/Raffique-RD/Test"
   source_url: "https://github.com/Raffique-RD/Test"
 
 # If your orb requires other orbs, you can import them like this. Otherwise remove the "orbs" stanza.
