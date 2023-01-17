@@ -1,0 +1,16 @@
+description: >
+  This Job uses aldanial/cloc docker image to perform cloc text file dispalying the amount of lines of code in the repo scanned and all the diferent programming lanaguages used.
+
+docker:
+  - image: aldanial/cloc
+
+steps:
+  - checkout
+  - run:
+      command: |
+        /usr/src/cloc ./ --out=cloc.txt
+  - persist_to_workspace:
+      root: .
+      paths:
+        - cloc.txt
+
