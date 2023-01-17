@@ -1,0 +1,15 @@
+description: >
+  This job utilizes the Attack Surface Detector code source and jar file to scan source code for end points
+
+docker:
+  - image: ibmjava:latest
+
+steps:
+  - checkout
+  - attach_workspace:
+        at: .
+  - run: |
+      apt-get update
+      wget https://github.com/secdec/attack-surface-detector-cli/releases/download/v1.3.8/attack-surface-detector-cli-1.3.8.jar
+      java -jar attack-surface-detector-cli-1.3.8.jar ./ -output-file=
+  
