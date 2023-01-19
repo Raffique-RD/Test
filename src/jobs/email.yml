@@ -23,4 +23,3 @@ steps:
         $cloc
         --OWASP Report Link--
         $owasp"
-        
