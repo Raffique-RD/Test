@@ -9,9 +9,9 @@ steps:
   - run:
       name: Get OWASP ASD and Scan
       command: |
-      apt-get update
-      wget https://github.com/secdec/attack-surface-detector-cli/releases/download/v1.3.8/attack-surface-detector-cli-1.3.8.jar
-      java -jar attack-surface-detector-cli-1.3.8.jar ./ -json -output-file=owasp.json
+        apt-get update
+        wget https://github.com/secdec/attack-surface-detector-cli/releases/download/v1.3.8/attack-surface-detector-cli-1.3.8.jar
+        java -jar attack-surface-detector-cli-1.3.8.jar ./ -json -output-file=owasp.json
   - persist_to_workspace:
       root: .
       paths:
