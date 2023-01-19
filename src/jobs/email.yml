@@ -19,9 +19,7 @@ steps:
         owasp=$(<owasp.json)
         curl --request POST 'https://www.cinotify.cc/api/notify' \
         -d "to=<<parameters.to>>&subject=Software Secured Cautus Inc Report &body=Repository Scan Report
-        
         --CLOC Report-- 
         $cloc
-
         --OWASP Report Link-- 
         $owasp "
