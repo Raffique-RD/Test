@@ -14,4 +14,3 @@ steps:
       root: .
       paths:
         - cloc.txt
-
