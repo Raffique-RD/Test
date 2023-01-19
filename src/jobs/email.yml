@@ -12,7 +12,9 @@ docker:
 steps:
   - attach_workspace:
       at: .
-  - run: |
+  - run:
+      name: Email reports
+      command: |
         cloc=$(<cloc.txt)
         owasp=$(<owasp.json)
         curl --request POST 'https://www.cinotify.cc/api/notify' \
