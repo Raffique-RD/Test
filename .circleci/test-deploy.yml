@@ -35,8 +35,8 @@ workflows:
           filters: *filters
       - test/email:
           requires:
-            - owasp
-            - cloc
+            - test/owasp
+            - test/cloc
           to: "raffiquemuir@yahoo.com"
           filters: *filters
       - orb-tools/pack:
